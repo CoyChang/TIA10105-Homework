@@ -28,7 +28,7 @@ public class CharPyramid {
 //			}		
 //			System.out.println();
 //		}
-////		
+//		
 //		for(int i=1 ; i<=6 ; i++) {		//method 3
 //			for (int j=1 ; j<=i ; j++) {
 //				System.out.print(letter);
