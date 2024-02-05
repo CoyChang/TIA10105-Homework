@@ -24,6 +24,5 @@ public class NumberPyramid {
 			}
 			System.out.println();
 		}
-		System.out.println("測試一下");
 	}
 }
