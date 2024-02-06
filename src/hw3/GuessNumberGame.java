@@ -52,6 +52,6 @@ public class GuessNumberGame {
 			}else {
 				System.out.println("輸入有誤，請輸入0 ~ 9 數字：");	
 			}
-		}		
+		}
 	}
 }
