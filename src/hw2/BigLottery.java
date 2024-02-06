@@ -19,6 +19,9 @@ public class BigLottery {
 			if (unitsDigit != 4 && tensDigit != 4) {
 				System.out.print(i + " ");
 				numbers++;
+				if (numbers%10 == 0) {  //單純排版用，一排10個
+					System.out.println();
+				}
 			}
 		}
 		
