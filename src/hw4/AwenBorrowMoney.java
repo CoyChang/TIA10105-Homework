@@ -41,5 +41,6 @@ public class AwenBorrowMoney {
 		}else {
 			System.out.println("欲借金額太高，沒人可借=.=");
 		}
+		inputData.close();
 	}
 }

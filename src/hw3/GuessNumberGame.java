@@ -30,7 +30,7 @@ public class GuessNumberGame {
 		
 		System.out.println("這是一個猜數字的遊戲，來試試你的運氣，請隨意猜一個數字(0 ~ 9)!");
 		System.out.println("開始猜數字吧!");
-		System.out.println(anwser);
+		//System.out.println(anwser);
 		
 		
 		while(true) {
@@ -53,5 +53,6 @@ public class GuessNumberGame {
 				System.out.println("輸入有誤，請輸入0 ~ 9 數字：");	
 			}
 		}
+		inputData.close();
 	}
 }
