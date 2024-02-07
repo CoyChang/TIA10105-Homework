@@ -27,6 +27,7 @@ public class StringReverse {
 				System.out.print(j);
 			}
 		}
+		inputData.close();
 	}
 
 }

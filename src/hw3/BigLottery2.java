@@ -49,7 +49,8 @@ public class BigLottery2 {
 			}		
 			System.out.println();
 			System.out.println("總共有： "+numbers+" 個");
-		}		
+		}
+		inputData.close();
 	}
 
 }
