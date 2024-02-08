@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class GuessNumberGame {
 
 	public static void main(String[] args) {
-		Scanner inputData;
+		Scanner inputData = new Scanner(System.in);
 		int anwser = (int) (Math.random()*10); //亂數產生一個0~9的數字
 		int guess;
 		
@@ -34,7 +34,6 @@ public class GuessNumberGame {
 		
 		
 		while(true) {
-			inputData = new Scanner(System.in);			
 			if (inputData.hasNextInt()) {	//判斷輸入的是否為整數
 				guess = inputData.nextInt();
 				if (guess >= 0 && guess <= 9) { //判斷輸入是否在範圍內

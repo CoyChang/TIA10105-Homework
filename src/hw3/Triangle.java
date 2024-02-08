@@ -23,19 +23,21 @@ public class Triangle {
 	
 	public static void main(String[] args) {
 		int[] edgeLength =  new int[3];	//宣告存放輸入三個整數的陣列		
-		Scanner inputData;
+		Scanner inputData = new Scanner(System.in);
 		int count = 0;
 		
 		System.out.println("請輸入三個整數：");		
-		while(count < edgeLength.length) {	//跳出迴圈的條件：當count大於edgeLength陣列的長度
-			inputData = new Scanner(System.in);
+		while(count < edgeLength.length) {	//跳出迴圈的條件：當count大於edgeLength陣列的長度			
 			if (inputData.hasNextInt()) {	//判斷輸入的是否為整數
 				edgeLength[count] = inputData.nextInt();
 				count++;
 			}else {
-				System.out.println("輸入有誤，請輸入整數：");	
+				System.out.println("輸入有誤，請重新輸入三個整數：");	
+				count = 0;	//重置index
+				inputData = new Scanner(System.in);
 			}
 		}
+		
 		
 		for(int i: edgeLength) {	//輸出輸入的資料
 			System.out.print(i + " ");
