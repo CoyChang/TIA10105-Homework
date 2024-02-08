@@ -37,13 +37,8 @@ public class Triangle {
 				inputData = new Scanner(System.in);
 			}
 		}
+		inputData.close();
 		
-		
-		for(int i: edgeLength) {	//輸出輸入的資料
-			System.out.print(i + " ");
-		}
-		
-		System.out.println();
 		Arrays.sort(edgeLength);	//將輸入資料由小到到排序
 		if(edgeLength[0]+edgeLength[1] > edgeLength[2]) {
 			if(edgeLength[0] == edgeLength[1] && edgeLength[1] == edgeLength[2]){
