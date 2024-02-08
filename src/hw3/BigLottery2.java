@@ -32,7 +32,7 @@ public class BigLottery2 {
 		int numbers = 0; //宣告算個數的變數		
 		
 		System.out.println("阿文…請輸入你討厭哪個數字？");
-		if(inputData.hasNextInt()) {
+		if(inputData.hasNextInt()) {	//判斷輸入的是否為整數
 			hateNumber = inputData.nextInt();
 			
 			System.out.println("阿文可以選擇的數字有：");
