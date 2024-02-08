@@ -33,7 +33,7 @@ public class Triangle {
 				count++;
 			}else {
 				System.out.println("輸入有誤，請重新輸入三個整數：");	
-				count = 0;	//重置index
+				count = 0;	//重置count
 				inputData = new Scanner(System.in);
 			}
 		}
