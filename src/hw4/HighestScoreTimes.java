@@ -12,12 +12,13 @@ public class HighestScoreTimes {
 							{90, 80, 100, 75, 50, 20, 99, 75}
 						};
 		int[] student = new int[8];
-		int max, index=0;
+		int max, index;
 		
 		for(int i=0 ; i<score.length ; i++) {
 			max = score[i][0];
+			index = 0;
 			for(int j=0 ; j<score[i].length ; j++) {				
-				if (score[i][j] >= max) {
+				if (score[i][j] > max) {
 					max = score[i][j];
 					index = j;
 				}				
