@@ -23,13 +23,17 @@ package hw3;
  */
 
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class BigLottery2 {
 
 	public static void main(String[] args) {
 		Scanner inputData = new Scanner(System.in);
-		int hateNumber, unitsDigit = 0, tensDigit = 0; //宣告討厭的數字、個位數、十位數的變數
-		int numbers = 0; //宣告算個數的變數		
+		int hateNumber, unitsDigit = 0, tensDigit = 0; //討厭的數字、個位數、十位數的變數
+		int numbers = 0, random; //算個數的變數、亂數的變數
+		int[] canChoose;	//能選擇的數字陣列
+		String temp = "";
+		int[] randomIndex = new int[6];	//存隨機挑選數字(索引值)的陣列
+		
 		
 		System.out.println("阿文…請輸入你討厭哪個數字？");
 		if(inputData.hasNextInt()) {	//判斷輸入的是否為整數
@@ -42,13 +46,46 @@ public class BigLottery2 {
 				if (unitsDigit != hateNumber && tensDigit != hateNumber) {
 					System.out.print(i + " ");
 					numbers++;
+					temp = temp + i + " ";	//先把能選的數字暫以空白分隔存成字串
 					if (numbers%10 == 0) {  //單純排版用，一排10個
 						System.out.println();
 					}
 				}
 			}		
+			
 			System.out.println();
 			System.out.println("總共有： "+numbers+" 個");
+			System.out.println("==================================");
+			
+			String[] temp2 = temp.split(" ");	//以空白分割成字串陣列
+			canChoose = new int[numbers];	//將個數大小指定給能選擇的數字陣列
+			for(int i=0 ; i<temp2.length ; i++) {
+				canChoose[i] = Integer.parseInt(temp2[i]);	//將暫存的字串陣列轉換成整數陣列
+			}			
+			
+			System.out.println("提供你隨機6個幸運的號碼：");	
+				
+			for(int i=0 ; i<randomIndex.length ; i++) {		//產生隨機6個號碼(索引值)
+				random = (int)(Math.random()*numbers);	//產生亂數
+				if(i==0) {	//存第一個產生的亂數
+					randomIndex[i] = random;
+				}else {	//第二個之後要進行比對是否有重複
+					randomIndex[i] = random;
+					for(int j=0 ; j<i ; j++) {
+						if(randomIndex[i] != randomIndex[j]) {	//假設是第四個，要跟前三個進行比對
+							continue;
+						}else if(randomIndex[i] == randomIndex[j]) {	//比對結果如有重複
+							i--;	//將目前的index先-1，之後會用新的值取代有重複的值
+							break;
+						}					
+					}
+				}
+			}			
+			
+			Arrays.sort(randomIndex);	//排序
+			for(int i : randomIndex) {	
+				System.out.print(canChoose[i] + " ");	//將亂數取得的6個號碼(索引值)，對照能選擇的數字陣列並輸出號碼
+			}			
 		}
 		inputData.close();
 	}

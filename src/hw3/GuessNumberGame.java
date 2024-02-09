@@ -24,7 +24,14 @@ import java.util.Scanner;
 public class GuessNumberGame {
 
 	public static void main(String[] args) {
-		Scanner inputData = new Scanner(System.in);
+		GuessNumberGame obj = new GuessNumberGame();
+		obj.game1(new Scanner(System.in));	//執行猜0~9數字的程式
+		System.out.println("結束第一個遊戲!");
+		System.out.println("============================================================");		
+		obj.game2(new Scanner(System.in));	//執行猜0~100數字的程式
+	}
+	
+	public void game1(Scanner inputData) {	//猜0~9數字的程式
 		int anwser = (int) (Math.random()*10); //亂數產生一個0~9的數字
 		int guess;
 		
@@ -49,9 +56,43 @@ public class GuessNumberGame {
 					continue;
 				}
 			}else {
-				System.out.println("輸入有誤，請輸入0 ~ 9 數字：");	
+				System.out.println("輸入有誤，請輸入0 ~ 9 數字：");
 			}
 		}
-		inputData.close();
 	}
+	
+	public void game2(Scanner inputData) {	//猜0~100數字的程式
+		int anwser = (int) (Math.random()*101); //亂數產生一個0~100的數字
+		int guess;
+		int min = 0, max = 100; //暫存目前猜的最小及最大數
+		
+		System.out.println("這是一個猜數字的遊戲，來試試你的運氣，請隨意猜一個數字(0 ~ 100)!");
+		System.out.println("開始猜數字吧!");
+		
+		while(true) {
+			if (inputData.hasNextInt()) {	//判斷輸入的是否為整數
+				guess = inputData.nextInt();
+				if (guess >= 0 && guess <= 100) { //判斷輸入是否在範圍內							
+					if(guess == anwser) {
+						System.out.println("答對了!答案就是 "+ anwser);						
+					}else if(guess > anwser){
+						max = guess - 1;	//當使用者所猜的數大於答案，將最大數的範圍設為使用者所猜的數字-1			
+						System.out.println("數字太大，猜小一點!!，範圍在："+min+" ~ "+max+"之間");
+						continue;
+					}else {
+						min = guess + 1;	//當使用者所猜的數小於答案，將最小數的範圍設為使用者所猜的數字+1			
+						System.out.println("數字太小，猜小一點!!，範圍在："+min+" ~ "+max+"之間");
+						continue;
+					}
+					break;
+				}else {
+					System.out.println("輸入有誤，請輸入0 ~ 100 數字：");
+					continue;
+				}
+			}else {
+				System.out.println("輸入有誤，請輸入0 ~ 100 數字：");	
+			}
+		}
+	}
+	
 }

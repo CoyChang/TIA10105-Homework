@@ -45,9 +45,11 @@ public class Triangle {
 				System.out.println("正三角形");
 			}else if(edgeLength[0] == edgeLength[1] || edgeLength[1] == edgeLength[2]){				
 				System.out.println("等腰三角形");				
+			}else if(Math.pow(edgeLength[0], 2) + Math.pow(edgeLength[1], 2) == Math.pow(edgeLength[2], 2)){
+				System.out.println("直角三角形");	
 			}else {
 				System.out.println("其它三角形");
-			}			
+			}		
 		}else {
 			System.out.println("不是三角形");
 		}
