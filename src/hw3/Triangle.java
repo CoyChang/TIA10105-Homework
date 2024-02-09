@@ -39,7 +39,7 @@ public class Triangle {
 		}
 		inputData.close();
 		
-		Arrays.sort(edgeLength);	//將輸入資料由小到到排序
+		Arrays.sort(edgeLength);	//將輸入資料由小到大排序
 		if(edgeLength[0]+edgeLength[1] > edgeLength[2]) {
 			if(edgeLength[0] == edgeLength[1] && edgeLength[1] == edgeLength[2]){
 				System.out.println("正三角形");
