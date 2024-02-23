@@ -33,7 +33,7 @@ public class AuthCode {
 			list[i] = (char)(97 - 36 + i);
 		}
 		
-		for(int i=0 ; i<8 ; i++) {
+		for(int i=0 ; i<8 ; i++) {	//產生8位數的驗證碼
 			authCode += list[(int)(Math.random()*62)];
 		}		
 		
