@@ -27,6 +27,7 @@ import java.util.Arrays;
 public class BigLottery2 {
 
 	public static void main(String[] args) {
+		BigLottery2 obj = new BigLottery2();
 		Scanner inputData = new Scanner(System.in);
 		int hateNumber, unitsDigit = 0, tensDigit = 0; //討厭的數字、個位數、十位數的變數
 		int numbers = 0, random; //算個數的變數、亂數的變數
@@ -80,8 +81,9 @@ public class BigLottery2 {
 						}					
 					}
 				}
-			}			
+			}
 			
+
 			Arrays.sort(randomIndex);	//排序
 			for(int i : randomIndex) {	
 				System.out.print(canChoose[i] + " ");	//將亂數取得的6個號碼(索引值)，對照能選擇的數字陣列並輸出號碼
@@ -89,5 +91,4 @@ public class BigLottery2 {
 		}
 		inputData.close();
 	}
-
 }

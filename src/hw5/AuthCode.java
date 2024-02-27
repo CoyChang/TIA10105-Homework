@@ -20,7 +20,7 @@ public class AuthCode {
 	
 	public String genAuthCode(){
 		String authCode = "";
-		char[] list = new char[62];	//數字加大小寫英文字母共62個
+		char[] list = new char[62]; //數字加大小寫英文字母共62個
 		for(int i=0 ; i<10 ; i++) {	//產生0~9的數字放進char陣列
 			list[i] = (char)(48 + i);
 		}
