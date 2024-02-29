@@ -1,13 +1,27 @@
 package hwext;
 
 public class Pencil extends Pen {
-	
-	public Pencil(String brand, double price) {
-		super(brand, price);
+	private double discount;	
+
+	public Pencil() {
+		super();
 	}
 	
+	public Pencil(String brand, double price, double discount) {
+		super(brand, price);
+		this.discount = discount;
+	}
+	
+	public double getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(double discount) {
+		this.discount = discount;
+	}	
+	
 	public double getPrice() {
-		double price = super.getPrice() * 0.8;
+		double price = super.getPrice() * discount;
 		return price;
 	}
 
