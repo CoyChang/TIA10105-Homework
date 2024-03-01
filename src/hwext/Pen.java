@@ -29,5 +29,10 @@ public abstract class Pen {
 		return price;
 	}
 	
+	public String toString() {
+		return "定價：" + price;
+	}
+	
 	public abstract void write();
+
 }
