@@ -21,8 +21,7 @@ public class InkBrush extends Pen {
 	}	
 	
 	public double getPrice() {
-		double price = super.getPrice() * discount;
-		return price;		
+		return super.getPrice() * discount;		
 	}
 	
 	public void write() {
