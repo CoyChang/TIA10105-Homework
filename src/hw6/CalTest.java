@@ -17,11 +17,11 @@ public class CalTest {
 				System.out.println("請輸入y的值：");
 				int y = Integer.parseInt(input.nextLine());
 				
-				Calculator calculator = new Calculator();
-                int result = calculator.powerXY(x, y);
+				Calculator cal = new Calculator();
+                int result = cal.powerXY(x, y);
                 System.out.println(x + "的" + y + "次方等於" + result);
 
-                inputIsValid = true; //輸入值都正常，跳出迴圈				
+                inputIsValid = true; //輸入值都符合要求，跳出迴圈				
 		
 			}catch(CalException e) {
 				System.out.println(e.getMessage());
