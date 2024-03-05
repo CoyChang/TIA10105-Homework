@@ -19,7 +19,7 @@ public class CalTest {
 				
 				Calculator calculator = new Calculator();
                 int result = calculator.powerXY(x, y);
-                System.out.println("x的y次方等於" + result);
+                System.out.println(x + "的" + y + "次方等於" + result);
 
                 inputIsValid = true; //輸入值都正常，跳出迴圈				
 		
