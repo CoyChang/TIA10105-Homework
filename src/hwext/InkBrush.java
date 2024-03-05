@@ -24,6 +24,11 @@ public class InkBrush extends Pen {
 		return super.getPrice() * discount;		
 	}
 	
+	public String toString() {
+		String price = "定價：" + super.getPrice();
+		return price;
+	}
+	
 	public void write() {
 		System.out.println("沾墨汁再寫");
 	}

@@ -23,6 +23,11 @@ public class Pencil extends Pen {
 	public double getPrice() {
 		return super.getPrice() * discount;
 	}
+	
+	public String toString() {
+		String price = "定價：" + super.getPrice();
+		return price;
+	}
 
 	public void write() {
 		System.out.println("削鉛筆再寫");
