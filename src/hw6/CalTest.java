@@ -1,6 +1,5 @@
 package hw6;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class CalTest {
@@ -25,7 +24,7 @@ public class CalTest {
 		
 			}catch(CalException e) {
 				System.out.println(e.getMessage());
-			}catch(InputMismatchException | NumberFormatException e) {
+			}catch(NumberFormatException e) {
 				System.out.println("輸入格式不正確");
 			}
 		}
