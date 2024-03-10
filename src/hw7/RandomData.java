@@ -14,7 +14,7 @@ public class RandomData {
 			PrintWriter pw = new PrintWriter(bw);
 			
 			for(int i=0 ; i<10 ; i++) {
-				random = (int) (Math.random()*1000+1);
+				random = (int) (Math.random()*1000)+1;
 				System.out.println(random);
 				if(i < 9) {
 					pw.print(random + ",");
