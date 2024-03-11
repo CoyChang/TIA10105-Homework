@@ -11,7 +11,7 @@ public class SampleInfo {
 		LineNumberReader lnr = new LineNumberReader(fr);
 		String str;
 		int line = 0;	//總行數
-		 int totalChars = 0;	//字元個數
+		int totalChars = 0;	//字元個數
 		long size = file.length();
 
 		
