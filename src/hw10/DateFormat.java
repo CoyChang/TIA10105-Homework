@@ -7,12 +7,11 @@ import java.util.Scanner;
 public class DateFormat {
 
 	public static void main(String[] args) {		
-		
+		Scanner input = new Scanner(System.in);
 		boolean left = false;
 				
 		while(!left) {
-			System.out.println("請輸入日期(年月日，例如：20110131)");
-			Scanner input = new Scanner(System.in);
+			System.out.println("請輸入日期(年月日，例如：20110131)");			
 			String regex = "\\d{4}(0[1-9]|1[0-2])(0[1-9]|[12]\\d|3[01])";
 			String date = input.next();
 			String y, m, d;
@@ -58,10 +57,9 @@ public class DateFormat {
 					System.out.printf("%s/%s/%s%n", d, m, y);
 					break;
 						
-			}
-			
-			left = true;
-			input.close();
+			}			
+			left = true;			
 		}
+		input.close();
 	}
 }

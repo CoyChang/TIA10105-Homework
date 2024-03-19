@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class NumberFormat {
 
 	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
 		boolean left = false;
 		
+		
 		while(!left) {
-			System.out.println("請輸入數字：");			
-			Scanner input = new Scanner(System.in);
+			System.out.println("請輸入數字：");
 			String regex = "\\d+(\\.\\d+)?";
 			String numStr = input.next();
 			double num = 0;
@@ -35,8 +36,8 @@ public class NumberFormat {
 					break;
 						
 			}
-			left = true;
-			input.close();
+			left = true;			
 		}
+		input.close();
 	}
 }
