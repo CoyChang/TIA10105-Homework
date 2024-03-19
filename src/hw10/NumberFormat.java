@@ -22,8 +22,7 @@ public class NumberFormat {
 			}
 			
 			System.out.println("欲格式化成(1)千分位 (2)百分比 (3)科學記號：");
-			Scanner input2 = new Scanner(System.in);
-			int choose = input2.nextInt();
+			int choose = input.nextInt();
 			switch(choose) {
 				case 1:
 					System.out.printf("%,.0f%n", num);
@@ -38,7 +37,6 @@ public class NumberFormat {
 			}
 			left = true;
 			input.close();
-			input2.close();
 		}
 	}
 }

@@ -40,8 +40,7 @@ public class DateFormat {
 			}
 			
 			System.out.println("欲格式化成(1)年/月/日 (2)月/日/年 (3)日/月/年：");
-			Scanner input2 = new Scanner(System.in);
-			int choose = input2.nextInt();
+			int choose = input.nextInt();
 			switch(choose) {
 				case 1:
 					System.out.printf("%s/%s/%s%n", y, m, d);
@@ -57,7 +56,6 @@ public class DateFormat {
 			
 			left = true;
 			input.close();
-			input2.close();
 		}
 	}
 }
