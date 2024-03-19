@@ -34,6 +34,9 @@ public class NumberFormat {
 				case 3:
 					System.out.printf("%.1E%n", num);
 					break;
+				default:
+                    System.out.println("無效的選擇，請重新輸入");
+                    continue;
 						
 			}
 			left = true;			

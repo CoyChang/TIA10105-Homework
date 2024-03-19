@@ -56,6 +56,9 @@ public class DateFormat {
 				case 3:
 					System.out.printf("%s/%s/%s%n", d, m, y);
 					break;
+				default:
+                    System.out.println("無效的選擇，請重新輸入");
+                    continue;
 						
 			}			
 			left = true;			
