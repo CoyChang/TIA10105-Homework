@@ -11,7 +11,11 @@ public class Hero {
 	private DefendStrategy defendStrategy;
 	
 	public Hero() {
-		this("AIMan", "SwordMan", 1, 0);
+		this("AIMan", "NoJob", 1, 0);
+	}
+	
+	public Hero(String name, String job) {
+		this(name , job, 1, 0);
 	}
 
 	public Hero(String name, String job, int level, double exp) {
